@@ -182,7 +182,7 @@ function initMenu() {
 /* --- Try to list files in a repo folder via GitHub API --- */
 async function listFilesInRepoFolder(folder) {
   try {
-    const api = `https://api.github.com/repos/${repoOwner}/${repoName}/tree/main/${folder}
+    const api = 'https://api.github.com/repos/${repoOwner}/${repoName}/tree/main/${folder}';
     const res = await fetch(api);
     if (!res.ok) throw new Error('GitHub API error: ' + res.status);
     const data = await res.json();
@@ -199,7 +199,7 @@ async function listFilesInRepoFolder(folder) {
 
 /* --- Build the raw.githubusercontent URL for a filename in the repo --- */
 function rawUrlFor(folder, filename) {
-  return `https://raw.githubusercontent.com/${repoOwner}/${repoName}/tree/main/${folder}/${filename}`;
+  return 'https://raw.githubusercontent.com/${repoOwner}/${repoName}/tree/main/${folder}/${filename}';
 }
 
 /* --- Load gallery for a category --- */
