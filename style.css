@@ -1,18 +1,23 @@
+/* style.css
+   Warm, light background and a friendly, slightly artistic type.
+   This file controls layout and visual style for index.html.
+*/
+
+/* Use Quicksand — friendly, legible, a bit playful */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
 
 :root{
-  --bg-warm: #fff7f2;    /* light warm background */
-  --card: #fffefc;       /* card/background for panels */
-  --accent: #9c5fce;     /* purple accent (keeps original) */
-  --accent-2: #d08be8;   /* lighter accent */
-  --muted: #6b625b;      /* warm muted text */
-  --ink: #1e1a18;        /* main text */
+  --bg-warm: #fff7f2;
+  --card: #fffefc;
+  --accent: #9c5fce;
+  --accent-2: #d08be8;
+  --muted: #6b625b;
+  --ink: #1e1a18;
   --shadow: 0 8px 22px rgba(30,26,24,0.06);
   --radius: 10px;
   --max-width: 1100px;
 }
 
-/* Page baseline */
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -28,7 +33,6 @@ body{
   padding:28px 18px;
 }
 
-/* Center container */
 .wrap{
   width:100%;
   max-width:var(--max-width);
@@ -53,7 +57,7 @@ header p{
   font-size:15px;
 }
 
-/* Category menu */
+/* Category buttons */
 nav.menu{
   display:flex;
   gap:10px;
@@ -82,7 +86,7 @@ nav.menu button.active{
   box-shadow: 0 10px 30px rgba(156,95,206,0.14);
 }
 
-/* Gallery area layout */
+/* Main gallery layout */
 .gallery-area{
   display:grid;
   grid-template-columns: 1fr 340px;
@@ -94,7 +98,7 @@ nav.menu button.active{
   .gallery-area{grid-template-columns:1fr}
 }
 
-/* Thumbnails strip */
+/* Thumbnails strip (single-row scroll) */
 .thumbnails{
   display:flex;
   gap:12px;
@@ -114,7 +118,7 @@ nav.menu button.active{
   border-radius:8px;
 }
 
-/* Thumbnail images */
+/* Thumbnails */
 .thumbnails img{
   height:170px;
   width:auto;
@@ -128,7 +132,7 @@ nav.menu button.active{
 }
 .thumbnails img:hover{ transform: translateY(-6px); box-shadow: 0 18px 36px rgba(0,0,0,0.10); }
 
-/* Preview + details */
+/* Preview */
 .preview{
   display:flex;
   gap:18px;
@@ -154,7 +158,6 @@ nav.menu button.active{
   width:100%;
   box-sizing:border-box;
 }
-.details-panel h4{margin:0 0 6px 0}
 .details-panel label{display:block; font-size:13px; color:var(--muted); margin-top:8px}
 .details-panel input[type="text"],
 .details-panel input[type="date"],
@@ -187,7 +190,7 @@ nav.menu button.active{
   box-shadow:none;
 }
 
-/* About section */
+/* About */
 .about{
   display:grid;
   grid-template-columns:1fr 420px 1fr;
@@ -204,8 +207,6 @@ nav.menu button.active{
   background:#fff;
   box-shadow: 0 8px 22px rgba(0,0,0,0.04);
 }
-
-/* Round center image */
 .about .round{
   width:220px; height:220px;
   border-radius:50%;
@@ -231,11 +232,11 @@ footer{
   margin-top:8px;
 }
 
-/* Small utilities */
+/* Helpers */
 .muted{color:var(--muted)}
 .placeholder{color:#9b8f8b}
 
-/* Responsive tweaks */
+/* Responsive */
 @media (max-width:720px){
   header h1{font-size:22px}
   .thumbnails{height:150px}
